@@ -1,6 +1,7 @@
 if vim.fn.has("win32") == 1 then
   -- On Windows
-  vim.opt.shell = "pwsh"
+  -- vim.opt.shell = "pwsh"
+  vim.opt.shell = "powershell"
   vim.opt.shellcmdflag = "-NoLogo -NoProfile -Command"
   vim.opt.shellquote = ""
   vim.opt.shellxquote = ""
