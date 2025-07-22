@@ -1,6 +1,5 @@
 if vim.fn.has("win32") == 1 then
   -- On Windows
-
   if vim.fn.executable("pwsh") == 1 then
     vim.opt.shell = "pwsh"
   else
@@ -13,10 +12,23 @@ if vim.fn.has("win32") == 1 then
 
 else
   -- On Linux/macOS (or anything else)
-
   if vim.fn.executable("/usr/bin/fish") == 1 then
     vim.opt.shell = "/usr/bin/fish"  -- or the output of `which fish`
   else
     vim.opt.shell = "/usr/bin/bash"
   end
 end
+
+-- Set neominimap to be disabled by default
+vim.g.neominimap_enabled = false
+
+-- Copilot starts disabled by default
+vim.g.copilot_enabled = false
+
+vim.cmd(
+  [[
+    let g:copilot_no_tab_map = v:true
+    inoremap <silent><expr> <C-]> copilot#Accept("\<CR>")
+    inoremap <silent><expr> <C-l> copilot#Accept("\<CR>")
+  ]]
+)
