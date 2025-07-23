@@ -7,6 +7,7 @@ return {
         ["<Leader>G"] = { desc=" GitHub Copilot" },
         ["<Leader>Ge"] = { "<cmd>Copilot enable<cr>", desc="Enable Copilot" },
         ["<Leader>Gd"] = { "<cmd>Copilot disable<cr>", desc="Disable Copilot" },
+        ["<Leader>Gh"] = { "<cmd>Copilot help<cr>", desc="Copilot Help Menu" },
         -- ["<Leader>m"] = { desc="Neominimap" },
         -- ["<Leader>me"] = { "<cmd>Neominimap BufEnable<cr>", desc="Enable minimap" },
         -- ["<Leader>md"] = { "<cmd>Neominimap BufDisable<cr>", desc="Disable minimap" },

@@ -25,10 +25,9 @@ vim.g.neominimap_enabled = false
 -- Copilot starts disabled by default
 vim.g.copilot_enabled = false
 
-vim.cmd(
-  [[
-    let g:copilot_no_tab_map = v:true
-    inoremap <silent><expr> <C-]> copilot#Accept("\<CR>")
-    inoremap <silent><expr> <C-l> copilot#Accept("\<CR>")
-  ]]
-)
+-- Set `Ctrl+l` to accept Copilot suggestion
+vim.keymap.set('i', '<C-L>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
