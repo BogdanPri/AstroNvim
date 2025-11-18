@@ -26,3 +26,4 @@ end
 require "lazy_setup"
 require "polish"
 require "user.options"
+require "user.header"
