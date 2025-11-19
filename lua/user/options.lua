@@ -25,8 +25,13 @@ vim.g.neominimap_enabled = false
 -- Copilot starts disabled by default
 vim.g.copilot_enabled = false
 
--- Set `Ctrl+l` to accept Copilot suggestion
-vim.keymap.set('i', '<C-L>', 'copilot#Accept("\\<CR>")', {
+-- Set `Ctrl+j` to accept Copilot suggestion
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+-- Set `Ctrl+l` to accept Copilot suggestion Word
+vim.keymap.set('i', '<C-L>', 'copilot#AcceptWord("\\<CR>")', {
   expr = true,
   replace_keycodes = false
 })
