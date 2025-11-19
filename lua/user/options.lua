@@ -37,6 +37,7 @@ vim.keymap.set('i', '<C-L>', 'copilot#AcceptWord("\\<CR>")', {
 })
 vim.g.copilot_no_tab_map = true
 
+-- LSL file comment string setup
 vim.cmd([[
   autocmd FileType lsl setlocal commentstring=//\ %s
 ]])
