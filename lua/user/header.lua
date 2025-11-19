@@ -10,6 +10,7 @@ function format_header_from_selection(args)
     c = "//",
     cpp = "//",
     lsl = "//",
+    kerboscript = "//",
   }
 
   -- Get current filetype 
@@ -23,7 +24,7 @@ function format_header_from_selection(args)
   local header = table.concat(lines, " ")
 
   -- Build and run command
-  local cmd = string.format('header -H "%s" -c "%s" %s', header, char, args or "")
+  local cmd = string.format('header -H "%s" -c="%s" %s', header, char, args or "")
   local output = vim.fn.system(cmd)
 
   -- Replace selection with formatted header
