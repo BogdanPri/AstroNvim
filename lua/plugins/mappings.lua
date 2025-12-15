@@ -10,7 +10,7 @@ return {
         ["<Leader>Gh"] = { "<cmd>Copilot help<cr>",    desc="Copilot Help Menu" },
         ["<Leader>Ga"] = { "<cmd>Copilot auth<cr>",    desc="Copilot Auth" },
         ["<Leader>Gt"] = { "<cmd>CopilotToggle<cr>",   desc="FloatTerm copilot"  },
-        ["<Leader>Gc"] = { "<cmd>CopilotChat<cr>",     desc="FloatTerm copilot"  },
+        ["<Leader>Gc"] = { "<cmd>CopilotChat<cr>",     desc="Copilot Chat"  },
         ["<Leader>m"] =  { desc="Neominimap" },
         ["<Leader>me"] = { "<cmd>Neominimap Enable<cr>",    desc="Enable minimap" },
         ["<Leader>md"] = { "<cmd>Neominimap Disable<cr>",   desc="Disable minimap" },
