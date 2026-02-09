@@ -28,3 +28,5 @@ require "polish"
 require "user.options"
 require "user.header"
 require "user.copilot"
+
+vim.cmd.colorscheme "catppuccin-mocha"
