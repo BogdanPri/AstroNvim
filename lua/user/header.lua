@@ -12,6 +12,8 @@ local comment_chars = {
   c = "//",
   cpp = "//",
   lsl = "//",
+  arduino = "//",
+  fortran = "!",
   kerboscript = "//",
 }
 
