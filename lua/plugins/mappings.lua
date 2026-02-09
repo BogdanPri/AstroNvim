@@ -20,13 +20,13 @@ return {
         -- setting a mapping to false will disable it
       },
       v = {
-        ["<Leader>h"] = { desc="Header" },
-        ["<Leader>hs"] = {
-          "<cmd>HeaderFormat -Us single<cr>",
+        ["<Leader>H"] = { desc="Header Formatting" },
+        ["<Leader>Hs"] = {
+          "<cmd>MkHdr -Us single<cr>",
           desc = "Format inline header from selection",
         },
-        ["<Leader>hm"] = {
-          "<cmd>HeaderFormat -Us multi<cr>",
+        ["<Leader>Hm"] = {
+          "<cmd>MkHdr -Us multi<cr>",
           desc = "Format multi-line header from selection",
         },
       },
