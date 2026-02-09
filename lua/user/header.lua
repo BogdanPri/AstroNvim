@@ -73,12 +73,14 @@ end
 
 vim.api.nvim_create_user_command("Hfmt", function(opts)
   -- build shell command
-  local args = table.concat(opts.fargs, " ")
-  local cmd = "hfmt " .. args
+  -- local args = table.concat(opts.fargs, " ")
+  local args = vim.list_extend({ text }, opts.fargs)
+  -- local cmd = "hfmt " .. args
 
   -- run and capture output
-  local output = vim.fn.system(cmd)
-  local lines = vim.split(output, "\n", { plain = true })
+  -- local output = vim.fn.system(cmd)
+  -- local lines = vim.split(output, "\n", { plain = true })
+  local lines = run_hfmt(args)
 
   -- insert result at cursor
   vim.api.nvim_put(lines, "l", true, true)
@@ -108,3 +110,7 @@ end, {
     nargs = "*",
     range = true,
 })
+
+------------------------------------------------------------------------------------
+-- END                                                                              
+------------------------------------------------------------------------------------
