@@ -43,3 +43,8 @@ vim.cmd([[
   autocmd FileType kerboscript setlocal commentstring=//\ %s
 ]])
 
+vim.filetype.add({
+  extension = {
+    gmf = "matlab",
+  }
+})
